@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 17</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background:#f4f6ff;
+            margin:0;
+            padding:20px;
+            line-height:1.6;
+        }
+
+        h1, h2, h3 {
+            color:#2f4c9c;
+            margin-top:25px;
+        }
+
+        .card {
+            background:white;
+            padding:18px;
+            border-radius:14px;
+            margin-top: 25px;
+            box-shadow:0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        pre {
+            background:#eef2ff;
+            padding:14px;
+            border-radius:10px;
+            white-space:pre-wrap;
+            font-family: Consolas, monospace;
+        }
+
+        .boxed {
+            border:2px solid #2f5bb7;
+            padding:14px;
+            border-radius:10px;
+            background:#f8fbff;
+            font-family: Consolas, monospace;
+            white-space:pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Bài 17</h1>
+
+    <!-- ==================== -->
+    <!--      I. LUYỆN TẬP   -->
+    <!-- ==================== -->
+    <section class="card">
+        <h2>I. Luyện tập</h2>
+
+        <!-- Luyện tập 1 -->
+        <h3>1. Luyện tập 1 – Trang 101</h3>
+        <p>Giải thích sự khác nhau giữa hai định dạng CSS sau:</p>
+
+        <div class="boxed">
+#p123 + p  
+h2#p123 + p
+        </div>
+
+        <h3>Lời giải</h3>
+        <pre>
+Hai định dạng CSS "#p123 + p" và "h2#p123 + p" khác nhau ở cách chọn phần tử HTML để áp dụng định dạng.
+
+- "#p123 + p":  
+Đây là selector kết hợp giữa ID selector và sibling combinator (+).  
+Nó chọn phần tử &lt;p&gt; là anh em liền kề ngay sau phần tử có ID là "p123".
+
+- "h2#p123 + p":  
+Đây là selector kết hợp giữa element selector (h2), ID selector và sibling combinator (+).  
+Nó chỉ chọn phần tử &lt;p&gt; là anh em liền kề ngay sau thẻ &lt;h2&gt; có ID là "p123".
+
+Như vậy, selector thứ hai có phạm vi chọn hẹp hơn selector thứ nhất.
+        </pre>
+
+        <!-- Luyện tập 2 -->
+        <h3>2. Luyện tập 2 – Trang 101</h3>
+        <p>
+Trong phần Thực hành, các tên riêng (tên người, tên tổ chức) cần được bổ sung định dạng
+đóng khung và in nghiêng. Em sẽ thực hiện như thế nào?
+        </p>
+
+        <h3>Lời giải</h3>
+        <pre>
+.name {
+    font-style: italic;        /* In nghiêng */
+    border: 1px solid #000;    /* Đóng khung */
+    padding: 2px;              /* Tạo khoảng cách với viền */
+    display: inline-block;     /* Đảm bảo viền ôm sát nội dung */
+}
+        </pre>
+    </section>
+
+    <!-- ==================== -->
+    <!--       II. VẬN DỤNG   -->
+    <!-- ==================== -->
+    <section class="card">
+        <h2>II. Vận dụng</h2>
+
+        <!-- Vận dụng 1 -->
+        <h3>1. Vận dụng 1 – Trang 101</h3>
+        <p>
+Tìm hiểu thêm các dạng pseudo-class khác, nêu ý nghĩa và ví dụ ứng dụng thực tế.
+        </p>
+
+        <h3>Lời giải</h3>
+        <pre>
+- :hover  
+Được kích hoạt khi người dùng di chuột qua một phần tử.  
+Ví dụ: đổi màu nút bấm khi rê chuột vào.
+
+- :active  
+Được kích hoạt khi phần tử đang được nhấn giữ chuột.  
+Ví dụ: thay đổi màu nền của nút khi click.
+
+- :focus  
+Được kích hoạt khi phần tử được focus (click hoặc tab tới).  
+Ví dụ: làm nổi bật ô nhập liệu khi người dùng nhập văn bản.
+
+- :nth-child()  
+Chọn phần tử con dựa theo vị trí của nó trong phần tử cha.  
+Ví dụ: tô màu dòng chẵn trong bảng.
+        </pre>
+
+        <!-- Vận dụng 2 -->
+        <h3>2. Vận dụng 2 – Trang 101</h3>
+        <p>
+Tìm hiểu thêm các dạng pseudo-element khác, nêu ý nghĩa và ví dụ ứng dụng thực tế.
+        </p>
+
+        <h3>Lời giải</h3>
+        <pre>
+- ::before  
+Cho phép chèn nội dung trước nội dung chính của phần tử.  
+Ví dụ: thêm biểu tượng trước tiêu đề.
+
+- ::after  
+Cho phép chèn nội dung sau nội dung chính của phần tử.  
+Ví dụ: thêm ký hiệu trang trí sau đoạn văn.
+
+- ::first-line  
+Áp dụng định dạng cho dòng đầu tiên của văn bản.  
+Ví dụ: làm đậm dòng đầu của một đoạn văn dài.
+        </pre>
+
+    </section>
+
+</body>
+</html>
